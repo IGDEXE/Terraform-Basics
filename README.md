@@ -3,4 +3,4 @@
 
 # Configurar o Terraform localmente
 Abra o cmd e use o comando:
-PowerShell.exe -ExecutionPolicy Bypass -File "caminho\Configurar Terraform Local.ps1"
+PowerShell.exe -ExecutionPolicy Bypass -File "caminhoLocal\Config\Configurar Terraform Local.ps1"
