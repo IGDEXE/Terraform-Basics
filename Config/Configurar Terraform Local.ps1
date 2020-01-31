@@ -33,14 +33,11 @@ try {
     # Cria um pasta em documentos
     Write-Host "Configurando ambiente"
     Validar-Pasta $pastaPadrao
+    $env:Path += ";$pastaPadrao" # Configura a variavel de ambiente
 
     # Extrai o executavel do Terraform
     Write-Host "Instalando o Terraform"
-    Expand-Archive -Path "$caminhoTerraform" -DestinationPath "$pastaPadrao"
-
-    # Configura a variavel de ambiente
-    Write-Host "Configurando o Windows"
-    $env:Path += ";$pastaPadrao"
+    Expand-Archive -Path "$caminhoTerraform" -DestinationPath "$pastaPadrao"    
 
     # Finaliza
     Write-Host "Procedimento concluido"    
