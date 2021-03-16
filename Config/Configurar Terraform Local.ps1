@@ -33,7 +33,7 @@ try {
     # Cria um pasta em documentos
     Write-Host "Configurando ambiente"
     Validar-Pasta $pastaPadrao
-    $env:Path += ";$pastaPadrao" # Configura a variavel de ambiente
+    [System.Environment]::SetEnvironmentVariable("Path", $env:Path + ";$pastaPadrao") # Configura a variavel de ambiente
 
     # Extrai o executavel do Terraform
     Write-Host "Instalando o Terraform"
